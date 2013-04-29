@@ -1,4 +1,4 @@
-From our chatlogs at Surge:
+From our chatlogs at Surge (editted to make me seem like a better debater/speller).
 
 > GM: can I just say, I hate 
 
