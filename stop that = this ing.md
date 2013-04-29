@@ -1,6 +1,6 @@
-From our chatlogs at Surge (editted to make me seem like a better debater/speller).
+From our chatlogs at Surge (editted for berevity and to make me seem like a better debater/speller).
 
-> GM: can I just say, I hate 
+> GM: Can I just say, I hate 
 
 >     that = this
 
@@ -8,34 +8,22 @@ From our chatlogs at Surge (editted to make me seem like a better debater/spelle
 
 >     self = this
 
-> GM: don't anyone do that
+> GM: Don't anyone do that
 
-> GM: the pattern is fine, but at least give it a meaningful name
+> GM: The pattern is fine, but at least give it a meaningful name
 
-> JA: hmmm.....i'll bite, devil's advocate
+> JA: Hmmm.....I'll bite, devil's advocate
 
-> GM: "that" is incredibly unhelpful
-
-> JA: why not folow an established convention?
-
-> JA: when javascript programmers see variable name "that", they immediately know what's happening
+> JA: Why not folow an established convention? When javascript programmers see a variable name "that", they immediately know what's happening
 
 > TS: anyone who has worked in JS for more than 10 seconds does :)
 
-> GM: @TS -  right, they know that its passed in from a higher scope. BUT in order to know what the actual object is they have to scan the whole file
+> GM: @TS -  right, they know that here is a variable passed in from a broader scope. However, when you use a variable you care far more about what it reperesents than where it came from, and in order to learn what "that" represents you have to scan the whole file, find the line that assings `var that = this;` then figure out in your head what `this` means.
 
 > SP: yeah. it can get frustrating
 
-> GM: It really takes like 2 seconds to just think of an appropriate name for hte variable
+> GM: It really takes like 2 seconds to just think of an appropriate name for the variable. I usually prefix with an _ just so that it sticks out a bit visually: _userModel, _slideViewer, _dialogWidget. Its not perfect but its a heck of a lot better than "that".
 
-> GM: I usually prefix with an _ just so that it sticks out a bit visually: _userModel, _slideViewer, _dialogWidget
+> GM: Variables should almost always be named after what they do/represent, not how they're implemented. Clearly we are breaking this guideline if we've got variables named "that" in different files having nothing to do with each other. The argument that it's a well known pattern isn't wrong, just that there's really no reason not to give it an even *more* descriptive name and not even have to think of the pattern.
 
-> GM: its not perfect but its a heck of a lot better than "that"
-
-> JA: i suppose if you named it the same as your object or function, it might be fine
-
-> GM: my point though is - that variables, functions, everything should almost always be named after what they do/represent, not how they're implemented. So when you've got "that" in two different files that have nothing to do 
-with > each other, we're obviously breaking that guideline. The argument that it's a well known pattern is fine, except that there's really no reason not to give it an even MORE descriptive name
-
-> GM: so I guess my real point is name things properly, it will be better for everyone always and "that", "self" are just not great names
-
+> GM: So I guess my real point is name things properly, it will be better for everyone always and "that", "self" are just not great names.
