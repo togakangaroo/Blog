@@ -1,6 +1,6 @@
 This talk is a write-up of a lightning talk I gave at [BarcampNola 6](http://barcampnola.com/). [See here for a sample project demonstrating this techniqe](https://github.com/togakangaroo/setting-up-requirejs).
 
-[http://requirejs.org/ RequireJs] is an awesome module loader that complies with the AMD standard and in most cases the CommonJs standard as well. For my money, a lot of the "structure" that frameworks like backbone.js provide can also come out of AMD's much simpler, module-based approach.
+[RequireJs](http://requirejs.org/) is an awesome module loader that complies with the AMD standard and in most cases the CommonJs standard as well. For my money, a lot of the "structure" that frameworks like backbone.js provide can also come out of AMD's much simpler, module-based approach.
 
 But enough with the flame-bait, let's talk about stuff that's indisputable. The RequireJs documentation is comprehensive, informative, and nearly incomprehensible as to how to actually set stuff up.
 
