@@ -23,7 +23,7 @@ To be sure, if you are building a truly single-page application this is not an i
 
 The problem is that while the resources and modules used might vary, the configuration (the `requirejs.config()` call required to configure what directory scripts are in, any shims, path aliases, etc) is likely exactly the same for the two. 
 
-Another issue emerges when using the [RequireJs optimizer](http://requirejs.org/docs/optimization.html). The way this works is that during deployment, you point the optimizer at a javascript file containing a RequireJs module that starts of your application. It will then walk the dependency tree concatenating, ordering, and optionally minifying all referenced modules. The result is your entire application in a single bootstrapping javascript file thereby minimizing both HTTP request count and size.
+Another issue emerges when using the [RequireJs optimizer](http://requirejs.org/docs/optimization.html). The way this works is that during deployment, you point the optimizer at a javascript file containing a RequireJs module that starts your application. It will then walk the dependency tree concatenating, ordering, and optionally minifying all referenced modules. The result is your entire application in a single bootstrapping javascript file thereby minimizing both HTTP request count and size.
 
 Of course once you have multiple pages, walking the dependencies for each will generate bundles which contain overlapping code for common libraries such as `jQuery`. This eats up many of those same bytes that we saved by minifying to begin with!
 
