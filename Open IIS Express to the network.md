@@ -51,4 +51,11 @@ I run all my development tools in a virtual machine so the following is my proce
 
 Congratulations, in just a dozen easy steps you have now opened up iis express! You should now be able to navigate to it from any device connected to the same network using http://your-host-machine-ip:1352. When you are not using a VM or using a bridged network configuration that will be http://your-webserver-machine-ip:1352. 
 
+-----------------------------------------------------
+
+Notes
+=====
+
 Note that some networks might be configured specifically to not allow inter-network access but this is not a common configuration.
+
+From David Woods You should add that if you are trying to open up iisexpress on a VM, and the location is on a shared folder, then you need to reference it with the UNC path (//vmware-shared/something/blah) instead of the shared drive (Z:/something/blah).
