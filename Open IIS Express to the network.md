@@ -28,7 +28,6 @@ I run all my development tools in a virtual machine so the following is my proce
 1. Setup a wildcard iis express binding in your iis applicationhosts file. Usually in `~\Documents\IISExpress\config\applicationhost.config`.
    Find the xml node corresponding to your project. Something along the lines of
    
-           ```xml
             <site name="YourProject.Web" id="11">
                 <application path="/" applicationPool="Clr4IntegratedAppPool">
                     <virtualDirectory path="/" physicalPath="c:\yourproject\YourProject.Web" />
@@ -37,8 +36,7 @@ I run all my development tools in a virtual machine so the following is my proce
                     <binding protocol="http" bindingInformation="*:1352:localhost" />
                 </bindings>
             </site>
-            ```
-            
+
     modify the binding node to a wildcard:
     
         <binding protocol="http" bindingInformation="*:1352:" />
