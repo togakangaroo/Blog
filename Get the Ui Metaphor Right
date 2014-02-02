@@ -1,0 +1,34 @@
+GM: lesson learned on friday - it's really really important to get the ui metaphor right
+JM: ?
+JM: ui metaphor?
+GM: so I had a screen in OGRE
+GM: basically there's a set of parameters and a slideset
+GM: and you can choose which parameters are associated with it
+GM: and configure the order
+GM: and set the default selection for each parameter for that slideset
+GM: and these features and screen kind of evolved over a long period of time and the screen was always kind of an admin panel thing
+GM: so I just did whatever was easiest
+GM: so basically there's a ui control called a "Parameter Context" that is used throughout the application and it shows the parameters as dropdowns and does all sorts of other stuff
+GM: and I added a dropdown that you can select and click a button to add a parameter
+GM: and a dropdown + button to remove one
+GM: and another area wher eyou can set defaults
+GM: and if you wanted to reorder th existing ones I hacked hte parameter context widget to in this case use a sortable foreach
+GM: so they can drag an drop it
+GM: so mallory pointed out a fairly minor bug on the screen where in a very specific situation things wouldn't get savead properly
+GM: and digging into it I kept running into walls for several days
+GM: because the code was messy
+GM: and i'd fix it but it would create a wierd looping dependency
+GM: so the biggest issue for example was that because I'd done the sorting in the param context, and the add/remove in the editor component I would always have to have a .subscribe watcher on one or the other so that they reflected each others state properly
+GM: and this was causing recursive loops that I had to do crazy hacks ot get out of
+GM: I tried all sorts of "lets scrap it all" solutions but it wasn't till friday that I realized the issue was that my basic ui metaphor was wrong
+GM: it's not "here's the parmaters and some controls for manipulating them" instead its "heres the list of all available parameters, and a list of all used parameters, and do whatever you want with these"
+GM: and the param context simply is a preview
+JM: I still don't know what you mean by ui metaphore
+GM: before: http://screencast.com/t/6YacFfsOauVs
+GM: after: http://screencast.com/t/xhxvlNB2j
+GM: the realization is that it's not about providing controls to affect that parameter context widget at the top
+GM: but its about sorting elements between two lists, and the "parameter context" widget merely reflects the current state of things
+GM: it took like 2 hours to implement including the nice css
+GM: and the complexity collapsed immediately
+GM: like half the code is gone
+GM: versus me banging my head against the wrong ui methaphor for days
