@@ -1,3 +1,5 @@
+## This blog is deprecated. [See the full site](http://togakangaroo.github.io/)
+
 Blog
 ====
 
